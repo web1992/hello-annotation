@@ -38,5 +38,10 @@ public class MainAnnotation {
 	
 	
 	
+	
+	
+	public  void test(){
+		
+	}
 
 }
