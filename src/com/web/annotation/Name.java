@@ -1,4 +1,4 @@
-package com.test.annotation;
+package com.web.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -9,19 +9,20 @@ import java.lang.annotation.Target;
 /**
  * 
 
- * @ClassName: Description
+ * @ClassName: Name
 
- * @Description: description @
+ * @Description: name @
 
  * @author: web
 
- * @date: 2014年11月30日 下午9:09:18
+ * @date: 2014年11月30日 下午9:12:13
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
+@Target(ElementType.METHOD)
 @Documented
-public @interface Description {
-	
-	public String value() default "i` am description "; 
+public @interface Name {
 
+		public String originnate() default "";
+		public String community() default ""; 
+	
 }

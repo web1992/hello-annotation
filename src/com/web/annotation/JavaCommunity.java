@@ -1,4 +1,4 @@
-package com.test.annotation;
+package com.web.annotation;
 
 
 @Description("我是Java 社区的Description ")

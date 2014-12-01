@@ -1,4 +1,4 @@
-package com.test.annotation;
+package com.web.annotation;
 
 import java.lang.reflect.Method;
 
