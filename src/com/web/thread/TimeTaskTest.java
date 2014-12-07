@@ -28,6 +28,7 @@ public class TimeTaskTest {
 		//打印系统时间秒数 0-60 
 		while(true){
 			Thread.sleep(1000); 
+			@SuppressWarnings("deprecation")
 			int seconds=new java.util.Date().getSeconds();
 			System.out.println(" threadName="+Thread.currentThread().getName()+ " "+seconds);
 		}
