@@ -9,4 +9,5 @@
  03. java 线程
  	 <a href="http://www.cnblogs.com/linjiqin/tag/java%20%E5%A4%9A%E7%BA%BF%E7%A8%8B/">java 多线程技术基础博客</a>
  	 <a href='http://blog.sina.com.cn/s/blog_9dc3005101013yto.html'>线程的同步技术</a>
+ 	 <a href='http://www.cnblogs.com/gpcuster/archive/2010/01/18/1650273.html'>线程中断</a>
  	 
