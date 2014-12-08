@@ -19,7 +19,7 @@ public class ThreadSyn {
 		// 线程同步代码，一块代码只能同时被一个线程来执行
 		// synchronized 把关键字作用在方法上，方法属于一个对象
 		// 实际等同于对这个对象加锁
-		OutPrintName outPrintName = new OutPrintName();
+		final OutPrintName outPrintName = new OutPrintName(); // jdk 8.0 内部类访问外部类变量不需要加 final 关键字
 
 		while (true) {
 			outPrintName.print2("ggggg");

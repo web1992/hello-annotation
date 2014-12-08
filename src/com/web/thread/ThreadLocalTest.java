@@ -29,7 +29,7 @@ public class ThreadLocalTest {
 	}
 
 	private void init(){
-		int data=new Random().nextInt();
+		final int data=new Random().nextInt();// jdk 8.0 内部类访问外部类变量不需要加 final 关键字
 		new Thread(
 				new Runnable(){
 					public void run() {
