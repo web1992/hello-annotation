@@ -5,8 +5,8 @@
 *.tmp
 Thumbs.db
 .buildpath
-.project
-.settings
+#.project
+#.settings
 .metadata
 RemoteSystemsTempFiles
 nbproject
