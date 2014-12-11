@@ -12,5 +12,6 @@
  	 <a href="http://www.cnblogs.com/gpcuster/archive/2010/01/18/1650273.html">线程中断</a><br />
  	 <a href="http://www.cnblogs.com/langtianya/p/3757993.html">java 8 新特性 </a><br />
  	 <a href="http://blog.csdn.net/lonelyroamer/article/details/7864531">java 泛型</a><br />
+   <a href="http://www.cnblogs.com/tekkaman/archive/2011/06/01/2065660.html">java 泛型</a><br />
  	 
  	 
