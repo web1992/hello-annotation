@@ -1,7 +1,7 @@
 
 
 <h2>java base study for new users.</h2>
-<hr />
+
  01. 仿照Spring 使用注解来获取app.propertise 文件的属性。<br />
                使用@Config  之后自动注入值。<br />
  02. 枚举<br />
@@ -13,5 +13,6 @@
  	 <a href="http://www.cnblogs.com/langtianya/p/3757993.html">java 8 新特性 </a><br />
  	 <a href="http://blog.csdn.net/lonelyroamer/article/details/7864531">java 泛型</a><br />
    <a href="http://www.cnblogs.com/tekkaman/archive/2011/06/01/2065660.html">Java线程新特征之同步</a><br />
+   <a href="http://blog.csdn.net/ghsau/article/details/7481142">Java Lock Condition</a><br />
  	 
  	 
