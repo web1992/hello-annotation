@@ -48,14 +48,29 @@ public class MainCountDownLatch {
 		System.out.println("fileName = "+file.getName());
 		System.out.println(file.getAbsolutePath());
 		FileReader in=new FileReader(file);
+		//文件的长度   字节数byte 
+		long l=file.length();
+		// 根据文件的长度，为每个线程分配各自的[工作量]，需要读取的字节数
+		
 		BufferedReader bufReader=new BufferedReader(in);
 		
 		
-//		FileOutputStream out=new FileOutputStream(file);
+//		bufReader.r
+		
+		
 		String str=null;
 		while (null != (str=bufReader.readLine()) ){
 			System.out.println(str);
 		}
+		
+		
+		
+		// 关闭文件流
+		if(null != in){in.close();}
+		if(null != bufReader){bufReader.close();}
+		
+		
+		
 		
 	}
 
