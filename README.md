@@ -12,7 +12,9 @@
  	 <a href="http://www.cnblogs.com/gpcuster/archive/2010/01/18/1650273.html" target="_blank">线程中断</a><br />
  	 <a href="http://www.cnblogs.com/langtianya/p/3757993.html" target="_blank">java 8 新特性 </a><br />
  	 <a href="http://blog.csdn.net/lonelyroamer/article/details/7864531" target="_blank">java 泛型</a><br />
-   <a href="http://www.cnblogs.com/tekkaman/archive/2011/06/01/2065660.html" target="_blank">Java线程新特征之同步</a><br />
-   <a href="http://blog.csdn.net/ghsau/article/details/7481142" target="_blank">Java Lock Condition</a><br />
+     <a href="http://www.cnblogs.com/tekkaman/archive/2011/06/01/2065660.html" target="_blank">Java之同步</a><br />
+     <a href="http://blog.csdn.net/ghsau/article/details/7481142" target="_blank">Java Lock Condition</a><br />
+     <a href="http://www.cnblogs.com/langtianya/p/3874019.html" target="_blank">Java Thread read File</a><br />
+     
  	 
  	 

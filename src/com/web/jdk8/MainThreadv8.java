@@ -8,7 +8,7 @@ public class MainThreadv8 {
 	
 	public static void main(String[] args) {
 		//final String a="123";
-		String a="123";
+		final String a="123";
 		new Thread(new Runnable(){
 			@Override
 			public void run() {

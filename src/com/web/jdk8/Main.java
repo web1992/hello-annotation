@@ -20,12 +20,12 @@ public class Main {
 	
 	private static void init(){
 		List<String> names = new ArrayList<String>();
-		Collections.sort(names,
+	/*	Collections.sort(names,
 				(Comparator<? super String>) (String a, String b) -> {
 					return b.compareTo(a);
 				});
 
-		Collections.sort(names, (a, b) -> ((String) b).compareTo((String) a));
+		Collections.sort(names, (a, b) -> ((String) b).compareTo((String) a));*/
 		
 		
 		
@@ -37,9 +37,9 @@ interface IMessage{
 	
 	public int getId();
 	//static default  不能共存
-	public default String getName(){
-		return "";
-	}
+//	public default String getName(){
+//		return "";
+//	}
 	
 	public abstract String getAddress();
 		
