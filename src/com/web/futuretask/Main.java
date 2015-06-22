@@ -24,7 +24,7 @@ public class Main {
             System.out.println(" load date 2 ");
             System.out.println(productInfo.getName());
 
-            System.out.println("l oad data finished.");
+            System.out.println(" load data finished.");
         } catch (ExecutionException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
