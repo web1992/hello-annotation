@@ -1,5 +1,7 @@
 package com.web.string;
 
+import java.text.MessageFormat;
+
 public class MainString {
 
 	public static void main(String[] args) {
@@ -19,6 +21,8 @@ public class MainString {
 			System.out.println(codes[1]);
 		}
 
+
+		MessageFormat.format("",1);
 	}
 
 }
