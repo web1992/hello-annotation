@@ -1,4 +1,8 @@
 package com.web.enums;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 
 
@@ -30,18 +34,22 @@ public enum ColorEnum {
 	 * @description 通过code获取枚举对象
 	 */
 	public static ColorEnum codeOf(String code){
-		ColorEnum[] colorEnums= ColorEnum.values();
-		//TODO 枚举类型中通过字段 code  获取这个code 对应的枚举值[对象]
-		for(ColorEnum colorEnum:colorEnums){
-			if(code.equals(colorEnum.code)){
-				return colorEnum;
-			}
+		// 枚举类型中通过字段 code  获取这个code 对应的枚举值[对象]
+		if(!map.containsKey(code)){
+			throw  new IllegalArgumentException(" ColorEnum not have this code.");
 		}
-		return null;
+		return map.get(code);
 	}
-	
-	
-	private ColorEnum(String code, String desc) {
+	private final static Map<String,ColorEnum> map=new HashMap<String, ColorEnum>();
+
+	static {
+		for(ColorEnum colorEnum:ColorEnum.values()){
+			map.put(colorEnum.code,colorEnum);
+		}
+	}
+
+
+	 ColorEnum(String code, String desc) {
 		this.code = code;
 		this.desc = desc;
 	}
@@ -59,6 +67,6 @@ public enum ColorEnum {
 		this.desc = desc;
 	}
 	
-	
+
 	
 }

@@ -10,7 +10,7 @@ class MyServer {
     private final static String IP = "127.0.0.1";
 
     private final static int PORT = 8084;
-    private final static int BUF_SIZE = 1024*1;
+    private final static int BUF_SIZE = 2*1;
 
     public MyServer() {
     }
