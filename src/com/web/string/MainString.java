@@ -22,7 +22,9 @@ public class MainString {
 		}
 
 
-		MessageFormat.format("",1);
+		String _str=MessageFormat.format("a={0}",1);
+		// {} 不能少
+		System.out.println(_str);
 	}
 
 }
