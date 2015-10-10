@@ -1,10 +1,10 @@
 package com.web.tcp;
 
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.InetAddress;
 import java.net.Socket;
 
-import static java.lang.System.out;
 
 /**
  * Created by web on 2015/10/10.
@@ -19,14 +19,18 @@ public class MyClient {
 
         Socket socket=new Socket(IP,PORT);
         InetAddress address=socket.getInetAddress();
-        out.println(address.getHostAddress());
-        out.println(address.getHostName());
+        System.out.println(address.getHostAddress());
+        System.out.println(address.getHostName());
 
-        OutputStream out= socket.getOutputStream();
+        OutputStream _out= socket.getOutputStream();
+        InputStream _in= socket.getInputStream();
         String msg= "hello world .";
         byte[] _b=msg.getBytes();
-        out.write(_b);
+        _out.write(_b);
+        _out.close();
+        _in.close();
         socket.close();
+        System.out.println("client end.");
 
     }
 }
