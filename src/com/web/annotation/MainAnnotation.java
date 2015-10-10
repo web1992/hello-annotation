@@ -38,9 +38,9 @@ public class MainAnnotation {
 				for(Method m:methods){
 					boolean methodFlag=m.isAnnotationPresent(Name.class);
 					if(methodFlag){
-					Name name=m.getAnnotation(Name.class);
-					System.out.println("originnate = "+name.originnate()+" community = "+name.community());
-				}
+						Name name=m.getAnnotation(Name.class);
+						System.out.println("originnate = "+name.originnate()+" community = "+name.community());
+					}
 				
 			}
 			
