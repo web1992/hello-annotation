@@ -36,20 +36,22 @@ public class Main {
         // 测试日期是否是同一周
         Calendar st = Calendar.getInstance();
         st.setTimeZone(TimeUtils.TIME_ZONE);
-        st.set(2015, 12, 26);
+        st.set(2015, 12, 31);
         st.setFirstDayOfWeek(Calendar.MONDAY);
 
         Calendar et = Calendar.getInstance();
         et.setTimeZone(TimeUtils.TIME_ZONE);
         et.setFirstDayOfWeek(Calendar.MONDAY);
-        et.set(2015, 12, 27);
+        et.set(2016, 01, 01);
 
         if (st.get(Calendar.WEEK_OF_YEAR) == et.get(Calendar.WEEK_OF_YEAR)) {
             print("true");
         }else{
             print("false");
         }
+        int dayShift=TimeUtils.getDayShift(st.getTimeInMillis(),et.getTimeInMillis());
 
+        print("dayShift="+dayShift);
     }
 
 }
