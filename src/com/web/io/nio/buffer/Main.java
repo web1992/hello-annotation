@@ -23,7 +23,7 @@ public class Main {
 
     private volatile boolean isLive = true;
     private Selector selector;
-    public static final int PORT = 8000;
+    public static final int PORT = 1234;
 
     public static void main(String[] args) throws Exception {
 
@@ -61,6 +61,10 @@ public class Main {
         Iterator<SelectionKey> iterator = this.selector.selectedKeys().iterator();
         out.println("msgReceive run.");
         while (isLive){
+            if( selector.select()==0){
+//                out.println(".");
+//                continue;
+            }
             while (iterator.hasNext()) {
                 SelectionKey _key = iterator.next();
                 // 删除注册的Selection
