@@ -13,7 +13,7 @@ import static java.lang.System.out;
 /**
  * Created by erniu on 2015/12/28.
  * <p/>
- * »ùÓÚSocketChannel µÄ¿Í»§¶ËµÄ»ù±¾ÊµÏÖ
+ * åŸºäºSocketChannel çš„å®¢æˆ·ç«¯çš„åŸºæœ¬å®ç°
  */
 public class Client {
     public static final int PORT = 1234;
@@ -30,7 +30,7 @@ public class Client {
     }
 
     /**
-     * Æô¶¯
+     * å¯åŠ¨
      */
     private void start() throws IOException {
         while (true) {
@@ -72,7 +72,7 @@ public class Client {
     }
 
     /**
-     * ³õÊ¼»¯¿Í»§¶Ë
+     * åˆå§‹åŒ–å®¢æˆ·ç«¯
      *
      * @throws IOException
      */
