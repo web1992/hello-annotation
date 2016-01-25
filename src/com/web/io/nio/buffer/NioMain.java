@@ -1,7 +1,6 @@
 package com.web.io.nio.buffer;
 
 
-import  static  java.lang.System.out;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
@@ -14,12 +13,14 @@ import java.util.Iterator;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import static java.lang.System.out;
+
 /**
  * Created by erbao.wang on 2015/12/28.
  *
  * @desc
  */
-public class Main {
+public class NioMain {
 
     private volatile boolean isLive = true;
     private Selector selector;
@@ -27,7 +28,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        Main main = new Main();
+        NioMain main = new NioMain();
         main.initServer();
         main.start();
 
@@ -58,13 +59,17 @@ public class Main {
 
     private void msgReceive() throws IOException {
 
-        Iterator<SelectionKey> iterator = this.selector.selectedKeys().iterator();
         out.println("msgReceive run.");
         while (isLive){
-            if( selector.select()==0){
-//                out.println(".");
-//                continue;
-            }
+            // 这个方法不能少，获取可用的 selectedKeys
+            // 方便后续的便利使用，
+            // 如果不调用改方法，获取的 selectedKeys 为空
+            // selector.select() 此方法会阻塞 ！！！
+           if( selector.select()==0){
+                continue;
+           }
+            Iterator<SelectionKey> iterator = this.selector.selectedKeys().iterator();
+
             while (iterator.hasNext()) {
                 SelectionKey _key = iterator.next();
                 // 删除注册的Selection
@@ -81,24 +86,31 @@ public class Main {
                     //
                     out.println("other run.");
                 }
+
             }
+
         }
 
     }
 
     private void read(SelectionKey key) throws IOException {
+        out.println("read run");
         SocketChannel channel = (SocketChannel) key.channel();
         ByteBuffer buffer=ByteBuffer.allocate(100);
         channel.read(buffer);
         byte[] msg=buffer.array();
-        out.println("receive msg "+new String(msg));
+        out.println("receive msg:"+new String(msg));
+        channel.register(this.selector, SelectionKey.OP_READ);
     }
 
 
     private void write(SelectionKey _key) throws IOException {
+        out.println("write run");
         ServerSocketChannel socketChannel = (ServerSocketChannel) _key.channel();
 
         SocketChannel channel = socketChannel.accept();
+        channel.configureBlocking(false);
+
         ByteBuffer _buff = ByteBuffer.allocate(100);
         channel.read(_buff);
         channel.write(ByteBuffer.wrap(new String("server send msg.").getBytes()));
