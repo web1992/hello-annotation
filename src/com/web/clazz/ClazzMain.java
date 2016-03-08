@@ -17,15 +17,15 @@ public class ClazzMain {
         Class clazz = myClassLoader.loadClass("com.web.clazz.Demo");
         Object obj = clazz.newInstance();
 
-        // doSomeThing ·½·¨ÊÇ¹«ÓÃµÄ£¬·Ç¾²Ì¬·½·¨£¬ĞèÒªÊµÀıÈ¥µ÷ÓÃ
+        // doSomeThing æ–¹æ³•æ˜¯å…¬ç”¨çš„ï¼Œéé™æ€æ–¹æ³•ï¼Œéœ€è¦å®ä¾‹å»è°ƒç”¨
         Method methodDoSomeThing = clazz.getMethod("doSomeThing", null);
 
-        //ÊµÀı·½·¨,ĞèÒªÀàµÄÊµÀı¶ÔÏó£¬µÚÒ»¸ö²ÎÊı²»ÄÜÎª¿Õ
+        //å®ä¾‹æ–¹æ³•,éœ€è¦ç±»çš„å®ä¾‹å¯¹è±¡ï¼Œç¬¬ä¸€ä¸ªå‚æ•°ä¸èƒ½ä¸ºç©º
         methodDoSomeThing.invoke(obj, null);
 
 
         Method methodMain = clazz.getMethod("main", new Class[]{String[].class});
-        // ¾²Ì¬·½·¨,²»ĞèÒªÀàµÄÊµÀı¶ÔÏó£¬µÚÒ»¸ö²ÎÊı¿ÉÎª¿Õ
+        // é™æ€æ–¹æ³•,ä¸éœ€è¦ç±»çš„å®ä¾‹å¯¹è±¡ï¼Œç¬¬ä¸€ä¸ªå‚æ•°å¯ä¸ºç©º
         methodMain.invoke((Object) null, (Object) null);
 
     }
