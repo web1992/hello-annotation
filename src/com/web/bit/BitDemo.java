@@ -26,4 +26,10 @@ public class BitDemo {
 
         }while (true);
     }
+
+
+
+    public void doSomeThing(){
+        System.out.println("doSomeThing");
+    }
 }
